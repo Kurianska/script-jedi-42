@@ -20,3 +20,23 @@ function pickIt(arr) {
   }
   return [odd, even];
 }
+
+// http://www.codewars.com/kata/5721c189cdd71194c1000b9b
+
+function grabDoll(dolls) {
+  let bag = [];
+  for (let el in dolls) {
+    if (dolls[el] === "Hello Kitty" || dolls[el] === "Barbie doll") {
+      bag.push(dolls[el]);
+    }
+    if (bag.length === 3) {
+      break;
+    }
+    continue;
+  }
+  return bag;
+}
+
+// http://www.codewars.com/kata/5722b3f0bd5583cf44001000
+
+
