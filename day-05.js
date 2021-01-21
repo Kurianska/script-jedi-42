@@ -13,3 +13,13 @@ function bonusTime(salary, bonus) {
 
 // https://www.codewars.com/kata/5a58d889880385c2f40000aa
 
+function automorphic(n) {
+  let p = n * n;
+  let pstr = String(p),
+    nstr = String(n);
+  let lengthp = pstr.length,
+    lengthn = nstr.length;
+  result = pstr.substr(lengthp - lengthn, lengthn);
+  return result === nstr ? "Automorphic" : "Not!!";
+}
+
