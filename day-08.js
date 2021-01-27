@@ -2,16 +2,16 @@
 
 function whatNumberIsIt(n) {
   let str;
-  switch (n) {
+  switch (!isNaN(n) && n) {
     case Number.MAX_VALUE:
       str = 'Input number is Number.MAX_VALUE';
       break;
     case Number.MIN_VALUE:
       str = 'Input number is Number.MIN_VALUE';
       break;
-    case isNaN(n):
+    case false:
       str = 'Input number is Number.NaN';
-
+      break;
     case -Infinity:
       str = 'Input number is Number.NEGATIVE_INFINITY';
       break;
