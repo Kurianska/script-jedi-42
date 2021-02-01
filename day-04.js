@@ -26,13 +26,9 @@ function pickIt(arr) {
 function grabDoll(dolls) {
   let bag = [];
   for (let el in dolls) {
-    if (dolls[el] === "Hello Kitty" || dolls[el] === "Barbie doll") {
-      bag.push(dolls[el]);
-    }
-    if (bag.length === 3) {
-      break;
-    }
-    continue;
+    if (dolls[el] !== "Hello Kitty" && dolls[el] !== "Barbie doll") continue;
+    bag.push(dolls[el]);
+    if (bag.length === 3) break;
   }
   return bag;
 }
