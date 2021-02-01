@@ -1,14 +1,14 @@
 // https://www.codewars.com/kata/571edd157e8954bab500032d
 
-var v1 = 50,
+let v1 = 50,
   v2 = 100,
   v3 = 150,
   v4 = 200,
   v5 = 2,
   v6 = 250;
 function equal1() {
-  var a = v1;
-  var b = v1;
+  let a = v1;
+  let b = v1;
   return a + b;
 }
 
@@ -36,7 +36,7 @@ function equal5() {
 equal1();
 equal2();
 equal3();
-equal4();
+equal4();;
 
 
 // http://www.codewars.com/kata/571edea4b625edcb51000d8e
