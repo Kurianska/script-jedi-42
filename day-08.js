@@ -37,3 +37,12 @@ function colorOf(r,g,b){
 
 // http://www.codewars.com/kata/57256064856584bc47000611
 
+function howManySmaller(arr, n) {
+  const newArr = [];
+  for (let el of arr) {
+    let i = +el.toFixed(2);
+    newArr.push(i);
+  }
+  const count = newArr.filter((i) => i < n);
+  return count.length;
+}
