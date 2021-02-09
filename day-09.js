@@ -15,3 +15,10 @@ function firstToLast(str,c){
 }
 
 // http://www.codewars.com/kata/57280481e8118511f7000ffa
+
+function splitAndMerge(string, separator) {
+  const newArr = string.split(" ").map(function (item) {
+    return item.split("").join(separator);
+  });
+  return newArr.join(" ");
+}
