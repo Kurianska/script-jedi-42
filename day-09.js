@@ -7,3 +7,5 @@ function cutIt(arr) {
   const result = arr.map((item) => item.slice(0, itemMin.length));
   return result;
 }
+
+// http://www.codewars.com/kata/57277a31e5e51450a4000010
