@@ -10,9 +10,9 @@ function alienLanguage(str) {
 
 
 
-//http://www.codewars.com/kata/5729b103dd8bac11a900119e
+// http://www.codewars.com/kata/5729b103dd8bac11a900119e
 
 function fiveLine(s) {
-  let c = s.trim();
-  return `${c}\n${c}${c}\n${c}${c}${c}\n${c}${c}${c}${c}\n${c}${c}${c}${c}${c}`;
+  s = s.trim();
+  return `${s}\n${s.repeat(2)}\n${s.repeat(3)}\n${s.repeat(4)}\n${s.repeat(5)}`;
 }
