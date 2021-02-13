@@ -6,3 +6,13 @@ function alienLanguage(str) {
 }
 
 // http://www.codewars.com/kata/57284d23e81185ae6200162a
+
+
+
+
+//http://www.codewars.com/kata/5729b103dd8bac11a900119e
+
+function fiveLine(s) {
+  let c = s.trim();
+  return `${c}\n${c}${c}\n${c}${c}${c}\n${c}${c}${c}${c}\n${c}${c}${c}${c}${c}`;
+}
