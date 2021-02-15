@@ -7,8 +7,14 @@ function alienLanguage(str) {
 
 // http://www.codewars.com/kata/57284d23e81185ae6200162a
 
-
-
+function topSecret(str) {
+  let s = str
+    .split('')
+    .map((char) => String.fromCharCode(char.charCodeAt() - 3))
+    .join('');
+  s = s.match(/[a-z]/gi).join('');
+  return s;
+}
 
 // http://www.codewars.com/kata/5729b103dd8bac11a900119e
 
