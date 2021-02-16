@@ -18,6 +18,8 @@ function loopArr(arr, direction, steps) {
         case (direction = "right"):
           return arr.reverse().splice(0, steps).concat(arr.reverse());
           break;
+        default:
+          steps > arr.length;
       }
     }
  
