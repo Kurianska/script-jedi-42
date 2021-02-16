@@ -13,10 +13,10 @@ const shuffleIt = (arr, ...numArr) => {
 function loopArr(arr, direction, steps) {
   switch (direction) {
     case (direction = 'left'):
-      console.log(arr.concat(arr.splice(0, steps)));
+      return arr.concat(arr.splice(0, steps));
       break;
     case (direction = 'right'):
-      console.log(arr.reverse().splice(0, steps).concat(arr.reverse()));
+      return arr.reverse().splice(0, steps).concat(arr.reverse());
       break;
     default:
       steps > arr.length;
