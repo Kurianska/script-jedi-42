@@ -10,3 +10,21 @@ const shuffleIt = (arr, ...numArr) => {
 
 // https://www.codewars.com/kata/5fd8aa5743b49e0012d43e50/
 
+function loopArr(arr, direction, steps) {
+  while (steps <= arr.length) {
+    for (el of arr) {
+      switch (direction) {
+        case (direction = "left"):
+          let removedLeft = arr.splice(0, steps);
+          return arr.concat(removedLeft);
+          break;
+
+        case (direction = "right"):
+          let removedRight = arr.reverse().splice(0, steps);
+          return removedRight.concat(arr.reverse());
+          break;
+      }
+    }
+  }
+}
+
