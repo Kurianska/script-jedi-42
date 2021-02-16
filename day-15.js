@@ -16,13 +16,12 @@ function loopArr(arr, direction, steps) {
       return arr.concat(arr.splice(0, steps));
       break;
     case (direction = 'right'):
-      return arr.reverse().splice(0, steps).concat(arr.reverse());
+      return arr.splice(-steps).concat(arr);
       break;
     default:
       steps > arr.length;
   }
 }
- 
 
 // http://www.codewars.com/kata/572af273a3af3836660014a1
 
