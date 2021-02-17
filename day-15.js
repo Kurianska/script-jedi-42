@@ -23,6 +23,23 @@ function loopArr(arr, direction, steps) {
 
 // http://www.codewars.com/kata/572af273a3af3836660014a1
 
+function infiniteLoop(arr, d, n) {
+  let newArr = arr.flat();
+  for (let i = 0; i < n; i++) {
+    if ((d = "left")) {
+      newArr.push(newArr.shift());
+    } else {
+      newArr.unshift(newArr.pop());
+    }
+  }
+  const arrSize = arr.length;
+  const result = [];
+  for (let j = 0; j < newArr.length; j += arrSize) {
+    result.push(newArr.slice(j, j + arrSize));
+  }
+  return result;
+}
+
 //http://www.codewars.com/kata/572cb264362806af46000793
 
 function threeInOne(arr) {
