@@ -23,3 +23,12 @@ function loopArr(arr, direction, steps) {
 
 // http://www.codewars.com/kata/572af273a3af3836660014a1
 
+//http://www.codewars.com/kata/572cb264362806af46000793
+
+function threeInOne(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i += 3) {
+    newArr.push(arr.slice(i, i + 3).reduce((a, b) => a + b));
+  }
+  return newArr;
+}
