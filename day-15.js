@@ -11,16 +11,14 @@ const shuffleIt = (arr, ...numArr) => {
 // https://www.codewars.com/kata/5fd8aa5743b49e0012d43e50/
 
 function loopArr(arr, direction, steps) {
-  switch (direction) {
-    case (direction = 'left'):
-      return arr.concat(arr.splice(0, steps));
-      break;
-    case (direction = 'right'):
-      return arr.splice(-steps).concat(arr);
-      break;
-    default:
-      steps > arr.length;
-  }
+  for (let i = 0; i < steps; i++) {
+      if (direction == 'left') {
+        arr.push(arr.shift());
+      } else {
+        arr.unshift(arr.pop());
+      }
+    }
+  return arr;
 }
 
 // http://www.codewars.com/kata/572af273a3af3836660014a1
