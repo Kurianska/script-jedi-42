@@ -24,20 +24,19 @@ function loopArr(arr, direction, steps) {
 // http://www.codewars.com/kata/572af273a3af3836660014a1
 
 function infiniteLoop(arr, d, n) {
-  let newArr = arr.flat();
-  for (let i = 0; i < n; i++) {
-    if ((d = "left")) {
-      newArr.push(newArr.shift());
-    } else {
-      newArr.unshift(newArr.pop());
+  for (var i = 1; i <= n; i++) {
+    if (d === "left") {
+      arr[2].push(arr[0].shift());
+      arr[1].push(arr[2].shift());
+      arr[0].push(arr[1].shift());
+    }
+    if (d === "right") {
+      arr[0].unshift(arr[2].pop());
+      arr[1].unshift(arr[0].pop());
+      arr[2].unshift(arr[1].pop());
     }
   }
-  const arrSize = arr.length;
-  const result = [];
-  for (let j = 0; j < newArr.length; j += arrSize) {
-    result.push(newArr.slice(j, j + arrSize));
-  }
-  return result;
+  return arr;
 }
 
 //http://www.codewars.com/kata/572cb264362806af46000793
