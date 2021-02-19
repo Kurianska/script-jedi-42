@@ -11,8 +11,8 @@ const shuffleIt = (arr, ...numArr) => {
 // https://www.codewars.com/kata/5fd8aa5743b49e0012d43e50/
 
 function loopArr(arr, direction, steps) {
-  for (let i = 0; i < steps; i++) {
-      if (direction == 'left') {
+  for (let i = 0; i <= steps; i++) {
+      if (direction === 'left') {
         arr.push(arr.shift());
       } else {
         arr.unshift(arr.pop());
