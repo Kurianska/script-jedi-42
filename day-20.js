@@ -15,7 +15,7 @@ function findSimilarity(str, word) {
     .split(" ")
     .filter(
       (v) =>
-        v.length == word.length &&
+        v.length === word.length &&
         v[0] === word[0] &&
         v[v.length - 1] === word[v.length - 1]
     )
