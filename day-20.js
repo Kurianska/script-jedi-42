@@ -1,7 +1,7 @@
 // http://www.codewars.com/kata/5735e39313c205fe39001173
 
 function countAnimals(animals, count) {
-  let result = [];
+  const result = [];
   for (let i of count) {
     result.push(animals.split(i).length - 1);
   }
