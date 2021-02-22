@@ -11,13 +11,16 @@ function countAnimals(animals, count) {
 // http://www.codewars.com/kata/573975d3ac3eec695b0013e0
 
 function findSimilarity(str, word) {
-  const regstr =
-    word[0] + word.slice(1, -1).replace(/./g, '.') + word.slice(-1); 
-  const reg1 = new RegExp('^' + regstr + '$');
-  return str
-    .split(' ')
-    .filter(v => reg1.test(v))
-    .join(' ');
+  const result = str
+    .split(" ")
+    .filter(
+      (v) =>
+        v.length == word.length &&
+        v[0] === word[0] &&
+        v[v.length - 1] === word[v.length - 1]
+    )
+    .join(" ");
+  return result;
 }
 
 // https://www.codewars.com/kata/573bca07dffc1aa693000139
