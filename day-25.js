@@ -7,7 +7,7 @@ Function.prototype.call = function(context, ...args) {
 
 //  http://www.codewars.com/kata/anonymous-returns
 
-const name = 'The Window';
+name = 'The Window';
 const alpha = {
   name: 'My Alpha',
   getNameFunc: function () {
