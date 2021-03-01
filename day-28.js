@@ -6,3 +6,7 @@ function always (n) {
 
 // https://www.codewars.com/kata/singleton-pattern/train/javascript
 
+function Singleton() {
+  const instance = Singleton.instance;
+  return instance ? instance : Singleton.instance = this;
+}
