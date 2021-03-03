@@ -7,12 +7,10 @@ Function.prototype.call = function(context, ...args) {
 
 //  http://www.codewars.com/kata/anonymous-returns
 
-name = 'The Window';
+name = "The Window";
 const alpha = {
-  name: 'My Alpha',
+  name: "My Alpha",
   getNameFunc: function () {
-    return function () {
-      return this.name;
-    }.bind(this);
+    return () => this.name;
   },
 };
