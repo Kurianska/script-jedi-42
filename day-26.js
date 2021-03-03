@@ -11,5 +11,5 @@ Function.prototype.bind = function (ctx) {
 // https://www.codewars.com/kata/sort-with-arrow-functions
 
 const OrderPeople = function(people){
-  return people.sort((a, b) => a.age-b.age);
+  return people.slice().sort((a, b) => a.age-b.age);
 }
