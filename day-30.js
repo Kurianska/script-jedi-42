@@ -25,4 +25,23 @@ class HumanSkin extends Cylon {
 
 // https://www.codewars.com/kata/588a00ad70720f2cd9000005/train/javascript
 
+class Router {
+  constructor() {
+    this.routes = {};
+  }
+
+  bind(url, method, action) {
+    if (!this.routes[url]) {
+      this.routes[url] = {};
+    }
+    this.routes[url][method] = action;
+  }
+  runRequest(url, method) {
+    if (this.routes[url] && this.routes[url][method]) {
+      return this.routes[url][method].call();
+    } else {
+      return "Error 404: Not Found";
+    }
+  }
+}
 
