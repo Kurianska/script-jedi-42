@@ -9,3 +9,12 @@ const twoSum = function (nums, target) {
     }
   }
 };
+
+
+function twoSum(arr, target) {
+  arr.some((x, i) => {
+    a = arr[i];
+    b = arr[i + 1];
+    if (a + b === target) return [arr.indexOf(a), arr.indexOf(b)];
+  });
+}
